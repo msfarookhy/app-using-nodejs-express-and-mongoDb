@@ -1,0 +1,31 @@
+
+
+.button{
+  margin-left: 1120px;
+  padding-top: 10px;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+btn-primary {
+  color: #fff;
+  background-color: #0b8eff;
+  border-color: #070808;
+}
+.card-img-top{
+height: 250px;
+width: 250px;
+/* padding-right: 10px; */
+}
+
+.content{
+  padding-left: 10%;
+}
+.card{
+  border: 1px solid;
+  /* height : 450px;
+  padding-left: 10px; */
+}

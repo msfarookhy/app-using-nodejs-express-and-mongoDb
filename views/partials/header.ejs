@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Meeting Up</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    
+</head>
+  <body>
+        <nav class="navbar navbar-light bg-light justify-content-between">
+                <a class="navbar-brand" href="/">Home</a>
+                <!-- <form class="form-inline">
+                  <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>            
+        <div class="button"> -->
+                <ul class="nav navbar-nav navbar-right">
+                    <% if(!currentUser){ %>
+                        <li class="<%= typeof page !== 'undefined' && page === 'login' ? 'active' : '' %>"><button class="btn"><a href="/login">Login</a></button></li>
+                        <li class="<%= typeof page !== 'undefined' && page === 'register' ? 'active' : '' %>"><button class="btn"><a href="/signup">signup</a></button></li>
+                        <% } else { %>
+                          <li><a href="#">Signed In As <%= currentUser.username %></a></li>
+                          <li><button class="btn"><a href="/users/logout">Logout</a></button></li>
+                      <% } %>
+                  </ul>
+          <!-- </div> -->
+          <!-- </div> -->
+          
+  </nav>
+
+  <div class="container">
+      <% if(error && error.length > 0) { %>
+        <div class="alert alert-danger"><p><%=error %></p></div>
+      <% } %>
+      
+      <% if(success && success.length > 0) { %>
+        <div class="alert alert-success"><p><%= success %></p></div>
+      <% } %>
+   </div>
+    <h1>THS Meeting</h1>
+    
